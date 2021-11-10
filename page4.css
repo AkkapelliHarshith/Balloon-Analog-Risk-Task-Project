@@ -1,0 +1,42 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: grey;
+ background-image: url("t5.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+.bigger{
+  background-color: white;
+  border:2px solid black;
+  margin-top:200px;
+  padding-left: 20px;
+  border-radius: 8px;
+  padding-right: 20px;
+  font-size: large;
+  color: black;
+}
+div.smaller{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin: 2px solid black;
+}
+div.smaller a{
+  border: 1px solid black;
+  padding: 5px 100px;
+  margin-left: 5px;
+  margin-right: 20px;
+  border-radius: 8px;
+  color: black;
+  font-size: large;
+  text-decoration: none;
+  background-color: lightgray;
+}
+div.smaller a:hover{
+  background-color: blue;
+  color: white;
+}

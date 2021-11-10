@@ -1,0 +1,70 @@
+body{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+
+ background-image: url("t5.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.8;
+}
+.bigger{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+
+
+
+
+  margin-top:100px;
+
+  font-size: large;
+  color: black;
+border-radius: 8px;
+border-color: black;
+
+}
+.temp{
+  padding-top: 0px;
+  margin-top: 0px;
+  float: top;
+}
+div.in1{
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:600px;
+  height: 400px;
+  margin-right: 20px;
+border-color: black;
+  background-color:white;
+  border-radius: 8px;
+  border:2px solid black;
+
+}
+.in2{
+   display:  flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:600px;
+  height: 400px;
+border-color: black; 
+  background-color: white;
+border:2px solid black;
+  border-radius: 8px;
+}
+button{
+  border-radius: 8px;
+  font-size: large;
+  color: black;
+  margin-bottom: 20px;
+}
+button:hover{
+  background-color: blue;
+  color:white
+}
+
+
