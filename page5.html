@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +8,182 @@
   <title>BART</title>
 </head>
 <link rel="stylesheet" href="page5.css">
-<script src="page5.js">
+<script src="https://cdn.plot.ly/plotly-2.4.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script >
+  var val1 = [];
+  var val2 = [];
+  var val3 = [];
+  val1.push(0);
+  val2.push(0);
+  val3.push(0);
+  var xx = 0;
+  let n=Math.floor((Math.random() * 10) + 1);
+  val3.push(n);
+var m=0;
+var r=1;
+var s=0; // total rewards
+var balloon_number=1;
+var s1=0;
+var p=document.getElementsByTagName("p");
+var button=document.getElementsByTagName("button")
+var f;
+
+function myFunction() {
+  if(m>n){
+    document.getElementById("myImg").height=98;
+    document.getElementById("myImg").width=107;
+    n=Math.floor((Math.random() * 10) + 1);
+    m=0;
+    s1=0;
+    balloon_number+=1;
+    if(balloon_number>30){
+  document.getElementById("ssss").disabled = false;
+  window.alert("Please click on submit button to continue");  
+    }
+  }
+  document.getElementById("demo").innerHTML="";
+  document.getElementById("myImg").height=document.getElementById("myImg").height+25;
+  document.getElementById("myImg").width=document.getElementById("myImg").width+15;
+  m=m+1;
+  s1=s1+1;
+  if(m<=n && (balloon_number <= 30)){
+    document.getElementById("reward").innerHTML="Reward for balloon "+balloon_number+" of 30 : <span style=" + "font-size:30px;"+">"+"$"+m+".00"+"</span>";
+
+    
+  }
+  else if(balloon_number <= 30){
+    m = 0;
+    document.getElementById("reward").innerHTML="Reward for balloon "+balloon_number+" of 30 : <span style=" + "font-size:30px;"+">"+"$"+m+".00"+"</span>";
+    var element=document.createElement("h1");
+    if(val1.length <= 31){
+    val1.push(balloon_number);
+    val2.push(m);      
+    }
+    balloon_number += 1;
+    element.innerHTML="Pop! Reward Lost";
+    element.style.color="red";
+    document.getElementById("demo").appendChild(element);
+    document.getElementById("myImg").height=98;
+    document.getElementById("myImg").width=107;
+    s1=0;
+  }
+}
+function anotherfunction(){
+  if(balloon_number+1 <= 30){
+      document.getElementById("demo").innerHTML="";
+  var element=document.createElement("h1");
+  element.style.color="green";
+
+  element.innerHTML="Reward Collected";
+  document.getElementById("demo").appendChild(element);
+  s=s+s1;
+  var temp1 = s1;
+  if(val1.length <= 31){
+        val1.push(balloon_number);
+    val2.push(s1);
+  }
+  s1=0;
+  document.getElementById("total").innerHTML="Total winnings : <span style="+"font-size:30px;>"+"$"+s+".00</span>"+"</br></br>";
+  document.getElementById("sss").readOnly = false;
+  document.getElementById("sss").value = s;
+  document.getElementById("sss").readOnly = true;
+
+  n=Math.floor((Math.random() * 10) + 1);
+  if(val3.length <= 31){
+    val3.push(n);
+  }
+  m=0;
+  balloon_number+=1;
+
+  document.getElementById("reward").innerHTML="Reward for balloon "+balloon_number+" of 30 : <span style=" + "font-size:30px;"+">"+"$"+m+".00"+"</span>";
+  document.getElementById("myImg").height=98;
+  document.getElementById("myImg").width=107;
+  f =s;
+  }
+  else{
+      document.getElementById("demo").innerHTML="";
+  var element=document.createElement("h1");
+  element.style.color="green";
+
+  element.innerHTML="Reward Collected";
+  document.getElementById("demo").appendChild(element);
+  s=s+s1;
+  if(val1.length <= 31){
+        val1.push(balloon_number);
+    val2.push(s1);
+  }
+
+  s1=0;
+  document.getElementById("total").innerHTML="Total winnings : <span style="+"font-size:30px;>"+"$"+s+".00</span>"+"</br></br>";
+  document.getElementById("sss").readOnly = false;
+  document.getElementById("sss").value = s;
+  document.getElementById("sss").readOnly = true;
+  n=Math.floor((Math.random() * 10) + 1);
+  m=0;
+  document.getElementById("myImg").height=98;
+  document.getElementById("myImg").width=107;
+  f =s;
+  document.getElementById("ssss").disabled = false;
+  console.log(val1.length,val2.length,val3.length);
+var trace1 = {
+
+  x: val1,
+
+  y: val2,
+
+  mode: 'lines+markers',
+  name: 'User Values'
+};
+
+
+var trace2 = {
+
+  x: val1,
+
+  y: val3,
+
+  mode: 'lines+markers',
+  name: 'System Generated Values'
+
+};
+
+var data = [trace1, trace2];
+var layout = {
+
+  title:'Plot of User input and System Generated Threshold values',
+    width:600,
+
+  height: 400,
+
+};
+TESTER = document.getElementById('p111');
+
+  Plotly.newPlot( TESTER,data, layout);
+
+  window.alert("Your game is over!!!. Please click on submit button to continue");      
+  }
+}
+
+
 </script>
 <body>
+  <div>
+  <div class = "hhh">
   <div class="bigger">
     
     <div class="inn1">
       <div class = "temp" style="text-align:center;background-color: white;margin-bottom: 0px;padding-right:50px;margin-right:20px;border-radius: 8px;border:2px solid black;"> <h1 style="padding-top:5px;padding-bottom:5px;">Input and Output Area</h1> </div>
       <div class="in1">
-      <p id="reward">Reward for balloon 0 of 30 : $0.00</p>
-      <p id="total">Total winnings : $0.00 </br></br></p>
+      <p id="reward" style="font-size:25px">Reward for balloon 0 of 30 : <span style="font-size:30px;">$0.00</span></p>
+      <p id="total" style="font-size:25px">Total winnings : <span style="font-size:30px;">$0.00</span> </br></br></p>
       <button style="height:30px;width:200px;padding-bottom: 10px;" onclick="myFunction()">Inflate</button></br>
       <button style="height:30px;width:200px;" onclick="anotherfunction()">Collect</button>
     </div>
   </div>
 
     <div class="inn2">
-<div class = "temp" style="text-align:center;background-color: white;margin-bottom: 0px,padding-bottom: 0px;padding-right:50px;border-radius: 8px;border:2px solid black;"> <h1 style="padding-top:5px;padding-bottom:5px;">Result Area</h1> </div>
+<div class = "temp" style="text-align:center;background-color: white;margin-bottom: 0px,padding-bottom: 0px;padding-right:50px;border-radius: 8px;border:2px solid black;"> <h1 style="padding-top:5px;padding-bottom:5px;">Observation Area</h1> </div>
       <div class = "in2">
       <div class="out">
         <img id="myImg" src="balloon.png" width="107" height="98" >
@@ -33,6 +193,31 @@
     </div>
   </div>
     </div>
+    <div class="in3" style="margin-left:20px;">
+<div class = "temp" style="text-align:center;background-color: white;margin-bottom: 0px,padding-bottom: 0px;padding-right:50px;border-radius: 8px;border:2px solid black;"> <h1 style="padding-top:5px;padding-bottom:5px;">Result Analysis Area</h1> </div>
+      <div class = "in2" id = "p111">
+      
+      
   </div>
+    </div>
+  </div>
+</div>
+
+<div class = "hh" style="text-align:center;background-color: white;padding-top: 100px,padding-bottom: 0px;padding-right:50px;border-radius: 8px;border:2px solid black;margin-top:20px;"> <h1 style="padding-top:5px;padding-bottom:5px;">Finish Area</h1> </div>
+    <div>
+  <div class = "lll">
+
+   <form action="http://localhost/BART-main/data.php" method="POST">
+    <div class = "zz">
+  <label for="fname" class = "mmm">Your Winnings in this Match(in $):&nbsp  </label>
+  <input type="text" id="sss" name="name111"  class = "mmm" value="0"><br><br>
+</div>
+
+ <div style="width:100%;color:blue;"> <input type="submit" value="Submit" name="kkk" class="sub" disabled id ="ssss"></div>
+</form> 
+</div>
+</div>
+</div>
+
 </body>
 </html>
