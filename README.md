@@ -8,7 +8,7 @@ M.Jaswanth sai
 M.Varshitha
 S. Sai Sandeep
 
-# Mentor: Dr.Varun Dutt TA: Kumar Harsh
+# Mentor: Dr.Varun Dutt, TA: Kumar Harsh
 
 # Installation
 0) Install the requirements mentioned in requirements.txt
