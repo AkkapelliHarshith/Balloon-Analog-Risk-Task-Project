@@ -1,0 +1,11 @@
+#requirements
+
+Most of our work is done with Firefox Browser. So Firefox is Recommended
+
+To host website locally we need XAMPP. You can install XAMPP from "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjllJu-0pf0AhX0xjgGHXmvBWMQFnoECAgQAQ&url=https%3A%2F%2Fwww.apachefriends.org%2Fdownload.html&usg=AOvVaw0FJaxz5J9FUgyQIdXelZ6c"
+
+Enable Javascript in your browser
+
+You have to dump both mysql dumps(dump1.sql,dump2.sql) using import from "http://localhost/phpmyadmin/"
+
+We assumed that password for mysql root is empty if it is not empty in your case you can just change password in config.php and config-2.php

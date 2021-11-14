@@ -48,7 +48,7 @@ global $con;
 $query = $con->prepare("SELECT COUNT(Total_Winings) AS CNT FROM bart_data");
     $query->execute();
     $row = $query->fetch(PDO::FETCH_ASSOC);
-    echo "<p style='font-size:22px;margin-top:-15px;'>Total number of Plays: <span style='color: SlateBlue;font-size:24px;'><b>$". $row["CNT"]."</b></span></p>";
+    echo "<p style='font-size:22px;margin-top:-15px;'>Total number of Plays: <span style='color: SlateBlue;font-size:24px;'><b>". $row["CNT"]."</b></span></p>";
 $query = $con->prepare("SELECT AVG(Total_Winings) AS AVGG FROM bart_data");
     $query->execute();
     $row = $query->fetch(PDO::FETCH_ASSOC);

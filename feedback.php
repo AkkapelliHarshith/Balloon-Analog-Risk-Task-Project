@@ -27,7 +27,7 @@
                         <br> </div>
                 </div>
                 <div style="width:100%;color:blue;border:0px;">
-                    <input type="submit" value="Submit" name="kkk" class="sub" id="ssss" style="width:53%;font-size: 20px;border:0px blue;background-color: blue;border-radius: 8px;color:white;">
+                    <input type="submit" value="Submit" name="kkk" class="sub" id="ssss" style="width:53%;font-size: 20px;border:0px blue;background-color: blue;border-radius: 8px;color:white;margin-left: 0px;">
                 </div>
             </form>
         </div>
