@@ -1,11 +1,11 @@
 # Balloon Analog Risk Task Project - CS308 - Large Applications Practicum
 # Group - 13
-A.Harshith
-Ch.Venupriya
-K.Sai karthik
-K.Pavan
-M.Jaswanth sai
-M.Varshitha
+A.Harshith,
+Ch.Venupriya,
+K.Sai karthik,
+K.Pavan,
+M.Jaswanth sai,
+M.Varshitha,
 S. Sai Sandeep
 
 # Mentor: Dr.Varun Dutt, TA: Kumar Harsh
