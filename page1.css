@@ -1,46 +1,44 @@
-
-body{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("t5.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.8;
-  vertical-align: middle;
-  
-}
-div{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding:10px 0px 10px 0px ;
-  background-color: lightgrey;
-
-  text-align: center;
-  font-size: large;
-margin-top: 50px;
-  width:  800px;
-  border-radius: 8px;
-  border:2px solid black;
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("t5.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.8;
+    vertical-align: middle;
 }
 
-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  flex-direction: column;
-  margin: 20px 0px -20px 0px;
-  border:2px solid black;
-  border-radius: 8px;
-  font-size: large;
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    background-color: lightgrey;
+    text-align: center;
+    font-size: large;
+    margin-top: 50px;
+    width: 800px;
+    border-radius: 8px;
+    border: 2px solid black;
 }
-button:hover{
-  background-color: blue;
-  color:white
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0px -20px 0px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: large;
+}
+
+button:hover {
+    background-color: blue;
+    color: white
 }
