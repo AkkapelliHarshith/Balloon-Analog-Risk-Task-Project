@@ -8,7 +8,7 @@ M.Jaswanth sai
 M.Varshitha
 S. Sai Sandeep
 
-# -Mentor: Dr.Varun Dutt
+# Mentor: Dr.Varun Dutt TA: Kumar Harsh
 
 # Installation
 1) Clone this repository or Download Zip file and extract these files in htdocs folder which is inside Xampp folder
